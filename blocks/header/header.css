@@ -1,11 +1,30 @@
-.header.block {
-  background: #111;
+header .header {
+  background: #004080;
   color: white;
-  padding: 20px;
+  padding: 20px 0;
 }
 
-.header.block a {
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header nav a {
   color: white;
-  margin-right: 16px;
+  margin-left: 20px;
   text-decoration: none;
+  font-weight: 500;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
 }

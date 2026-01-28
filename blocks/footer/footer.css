@@ -1,6 +1,7 @@
-.footer.block {
-  background: #222;
+footer .footer {
+  background: #004080;
   color: white;
-  padding: 16px;
+  padding: 24px;
   text-align: center;
+  font-size: 14px;
 }

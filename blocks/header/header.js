@@ -1,16 +1,14 @@
 export default function decorate(block) {
-  const rows = [...block.children];
-
-  if (!rows.length) return;
-
-  const title = rows[0]?.textContent;
-  const navItems = rows[1]?.textContent?.split(',');
+  const [logo, nav] = block.children;
 
   block.innerHTML = `
-    <div class="header-content">
-      <h1>${title}</h1>
+    <div class="header-inner">
+      <div class="logo">${logo?.textContent || ''}</div>
       <nav>
-        ${navItems.map(item => `<a href="#">${item.trim()}</a>`).join('')}
+        ${nav?.textContent
+          .split(',')
+          .map((i) => `<a href="#">${i.trim()}</a>`)
+          .join('')}
       </nav>
     </div>
   `;
